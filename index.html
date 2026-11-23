@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CredenFlow | Prototipo de Credenciales Estudiantiles</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand" id="go-home" role="button" tabindex="0">
+        <span class="brand-badge">CF</span>
+        <div>
+          <strong class="brand-name">CredenFlow</strong>
+          <span class="brand-sub">TecNM Campus Matehuala · Demo</span>
+        </div>
+      </div>
+
+      <nav class="nav-actions" aria-label="Navegación principal">
+        <button class="btn btn-ghost" data-view="home">Inicio</button>
+        <button class="btn btn-ghost" data-view="student">Portal Alumno</button>
+        <button class="btn btn-primary" data-view="admin">Panel Admin</button>
+        <button class="btn btn-outline" id="reset-demo" title="Restaurar datos de prueba">
+          Reiniciar demo
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <!-- VISTA 1: INICIO -->
+    <section id="view-home" class="view active">
+      <div class="hero card">
+        <span class="pill">Prototipo Académico · Datos Ficticios</span>
+        <h1>Digitalización de solicitud, seguimiento y entrega de credenciales</h1>
+        <p class="lead">
+          Simulación del flujo de credencial estudiantil (primera vez y reposición) para reducir
+          vueltas innecesarias y dar seguimiento claro al trámite.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" data-view="student">Entrar como Alumno</button>
+          <button class="btn btn-outline" data-view="admin">Entrar como Servicios Escolares</button>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>1. Solicitud en línea</h3>
+          <p>El alumno elige primera vez o reposición, adjunta foto de prueba y obtiene folio y referencia simulada.</p>
+        </article>
+        <article class="card">
+          <h3>2. Seguimiento claro</h3>
+          <p>Consulta el estado de su trámite y recibe avisos internos sin ir a preguntar a ventanilla.</p>
+        </article>
+        <article class="card">
+          <h3>3. Entrega ágil</h3>
+          <p>El área administrativa gestiona estados, marca credencial lista y registra la entrega simulada.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- VISTA 2: PORTAL DEL ALUMNO -->
+    <section id="view-student" class="view">
+      <div class="section-header">
+        <div>
+          <h2>Portal del Alumno</h2>
+          <p class="muted">Consulta tu solicitud, revisa avisos o genera una nueva solicitud de prueba.</p>
+        </div>
+        <div class="student-picker">
+          <label for="student-select">Alumno de prueba:</label>
+          <select id="student-select"></select>
+        </div>
+      </div>
+
+      <div id="student-content" class="stack-lg">
+        <!-- Se llenará en el siguiente paso con JavaScript -->
+      </div>
+    </section>
+
+    <!-- VISTA 3: PANEL ADMINISTRATIVO -->
+    <section id="view-admin" class="view">
+      <div class="section-header">
+        <div>
+          <h2>Panel Administrativo · Servicios Escolares</h2>
+          <p class="muted">Revisa solicitudes, actualiza estados, envía avisos y registra entregas simuladas.</p>
+        </div>
+      </div>
+
+      <div id="admin-content" class="stack-lg">
+        <!-- Se llenará más adelante con JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
